@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:trendy_hive/screens/otp_screen.dart';
+import 'package:trendy_hive/screens/recovery_screen.dart';
 
 import 'home_screen.dart';
 
@@ -87,12 +89,42 @@ class _ForgotPassWordScreenState extends State<ForgotPassWordScreen> {
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomeScreen(),
+                    builder: (context) => const RecoveryScreen(),
                   ),
                 ),
                 child: Text(
                   "Send Code",
                   style: TextStyle(fontSize: 18.sp),
+                ),
+              ),
+
+              20.verticalSpace,
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "OR",
+                      style:
+                      TextStyle(color: Colors.black, fontSize: 15.sp),
+                    ),
+                    5.verticalSpace,
+                    TextButton(
+                      onPressed: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const OtpScreen(),
+                        ),
+                      ),
+                      child: Text(
+                        "Verify Using Number",
+                        style: TextStyle(
+                            color: Colors.redAccent, fontSize: 18.sp),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
