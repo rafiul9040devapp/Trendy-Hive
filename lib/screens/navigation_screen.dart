@@ -35,11 +35,12 @@ class _NavigationScreenState extends State<NavigationScreen> {
 
       floatingActionButton: SafeArea(
         child: FloatingActionButton(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(45.r)),
           onPressed: (){},
           elevation: 2.spMin,
           backgroundColor: Colors.redAccent,
           foregroundColor: Colors.white,
-          child: Icon(Icons.qr_code_2_rounded,size: 25.spMin),
+          child: Icon(Icons.qr_code_2_rounded,size: 35.sp),
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
