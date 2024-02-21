@@ -23,7 +23,7 @@ class TrendyHive extends StatelessWidget {
           home: child,
         );
       },
-      child: const LoginScreen(),
+      child: const SplashScreen(),
     );
   }
 }

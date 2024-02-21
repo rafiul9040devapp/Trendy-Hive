@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:trendy_hive/constants/assets.dart';
 import 'package:trendy_hive/screens/home_screen.dart';
+import 'package:trendy_hive/screens/login_screen.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   final introKey = GlobalKey<IntroductionScreenState>();
@@ -12,8 +13,8 @@ class OnBoardingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final pageDecoration = PageDecoration(
-        titleTextStyle: TextStyle(fontSize: 28.sp, fontWeight: FontWeight.w700),
-        bodyTextStyle: TextStyle(fontSize: 18.sp),
+        titleTextStyle: TextStyle(fontSize: 28.sp, fontWeight: FontWeight.w700,color: Colors.black.withOpacity(.5)),
+        bodyTextStyle: TextStyle(fontSize: 18.sp,color: Colors.black54),
         bodyPadding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 16.w),
         pageColor: Colors.white,
         imagePadding: EdgeInsets.zero);
@@ -64,7 +65,7 @@ class OnBoardingScreen extends StatelessWidget {
               onPressed: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const HomeScreen(),
+                  builder: (context) => const LoginScreen(),
                 ),
               ),
               child: Text(

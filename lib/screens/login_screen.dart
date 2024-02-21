@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:trendy_hive/constants/assets.dart';
 import 'package:trendy_hive/screens/forgot_password_screen.dart';
+import 'package:trendy_hive/screens/navigation_screen.dart';
 import 'package:trendy_hive/screens/signup_screen.dart';
 
 import 'home_screen.dart';
@@ -76,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () => Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const HomeScreen(),
+                          builder: (context) => const NavigationScreen(),
                         ),
                       ),
                       child: Text(
