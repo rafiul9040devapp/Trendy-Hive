@@ -78,7 +78,7 @@ class _RecoveryScreenState extends State<RecoveryScreen> {
                 onPressed: () => Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomeScreen(),
+                    builder: (context) =>  HomeScreen(),
                   ),
                 ),
                 child: Text(
