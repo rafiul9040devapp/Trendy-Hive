@@ -13,13 +13,15 @@ class LocalProduct {
     required this.reviews,
   });
 
+   static final List<String> imageList = [
+    AppImages.image1,
+    AppImages.image2,
+    AppImages.image3,
+    AppImages.image4
+  ];
+
   static List<LocalProduct> generateProductList() {
-    final List<String> imageList = [
-      AppImages.image1,
-      AppImages.image2,
-      AppImages.image3,
-      AppImages.image4
-    ];
+
     final List<String> productTitles = ["Warm Zipper", "Knitted Woo!", "Zipper Win", "Child Win"];
     final List<String> prices = ["\$300", "\$650", "\$500", "\$400"];
     final List<String> reviews = ["54", "120", "541", "535"];
