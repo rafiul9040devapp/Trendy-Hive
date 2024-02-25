@@ -17,6 +17,12 @@ class ProductScreen extends StatelessWidget {
       //   elevation: 0.0,
       //   foregroundColor: Colors.black,
       // ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
+      floatingActionButton: IconButton(
+        onPressed: () => Navigator.pop(context),
+        icon: Icon(Icons.arrow_back_ios_new,size: 25.spMin,color: Colors.black,),
+      ),
+
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
@@ -123,7 +129,13 @@ class ProductScreen extends StatelessWidget {
                         flex: 3,
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-
+                            foregroundColor: Colors.white,
+                            backgroundColor: Colors.redAccent,
+                            minimumSize: Size(MediaQuery.sizeOf(context).width,
+                                MediaQuery.of(context).size.height * .08.h),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.r),
+                            ),
                           ),
                           onPressed: () {},
                           child: Text("Buy Now"),

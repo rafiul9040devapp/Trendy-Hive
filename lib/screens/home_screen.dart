@@ -303,7 +303,7 @@ class HomeScreen extends StatelessWidget {
                     itemCount: LocalProduct.generateProductList().length,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
-                        childAspectRatio: .7,
+                        childAspectRatio: .65,
                         crossAxisSpacing: 2.w),
                     itemBuilder: (context, index) {
                       LocalProduct product =
