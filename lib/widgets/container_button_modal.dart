@@ -12,18 +12,20 @@ class ContainerButtonModal extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * .6.h,
+      height: MediaQuery.of(context).size.height * .06.h,
       width: containerWidth,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.r),
         color: containerColor,
       ),
-      child: Text(
-        text ?? "",
-        style: TextStyle(
-          color: Colors.white70,
-          fontWeight: FontWeight.bold,
-          fontSize: 18.sp,
+      child: Center(
+        child: Text(
+          text ?? "",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 18.sp,
+          ),
         ),
       ),
     );

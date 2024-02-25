@@ -4,6 +4,8 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:trendy_hive/model/local_product.dart';
 
+import '../widgets/product_details_popup.dart';
+
 class ProductScreen extends StatelessWidget {
   const ProductScreen({super.key});
 
@@ -114,32 +116,16 @@ class ProductScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Flexible(
-                        child: CircleAvatar(
-                          radius: 20.r,
-                          backgroundColor: Colors.white,
-                          foregroundColor: Colors.redAccent,
-                          child: Icon(
-                            Icons.shopping_cart,
-                            size: 25.spMin,
-                            color: Colors.redAccent,
-                          ),
+                        child: Icon(
+                          Icons.shopping_cart,
+                          size:  35.spMax,
+                          color: Colors.redAccent,
                         ),
                       ),
+                      15.horizontalSpace,
                       Flexible(
-                        flex: 3,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            foregroundColor: Colors.white,
-                            backgroundColor: Colors.redAccent,
-                            minimumSize: Size(MediaQuery.sizeOf(context).width,
-                                MediaQuery.of(context).size.height * .08.h),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.r),
-                            ),
-                          ),
-                          onPressed: () {},
-                          child: Text("Buy Now"),
-                        ),
+                        flex: 4,
+                        child:ProductDetailsPopUp()
                       ),
                     ],
                   ),
