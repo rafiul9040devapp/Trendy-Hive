@@ -164,7 +164,10 @@ class ProductDetailsPopUp extends StatelessWidget {
                   ),
                   15.verticalSpace,
                   InkWell(
-                    onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const CartScreen())),
+                    onTap: () {
+                      Navigator.of(context).pop();
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const CartScreen()));
+                    },
                     child: ContainerButtonModal(
                       containerColor: Colors.redAccent,
                       text: "Check Out",

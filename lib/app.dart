@@ -24,7 +24,7 @@ class TrendyHive extends StatelessWidget {
           home: child,
         );
       },
-      child: const ProductScreen(),
+      child: const SplashScreen(),
     );
   }
 }

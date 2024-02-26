@@ -74,7 +74,7 @@ class LoginScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10.r),
                         ),
                       ),
-                      onPressed: () => Navigator.push(
+                      onPressed: () => Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                           builder: (context) => const NavigationScreen(),
