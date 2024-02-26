@@ -13,4 +13,8 @@ class AppImages {
   static const String splash1 = '${image}splash1.png';
   static const String splash2 = '${image}splash2.png';
   static const String splash3 = '${image}splash3.png';
+  static const String amazon = '${image}amazon.png';
+  static const String paypal = '${image}paypal.png';
+  static const String visa = '${image}visa.png';
+  static const String master = '${image}master.jpg';
 }

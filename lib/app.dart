@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:trendy_hive/screens/login_screen.dart';
+import 'package:trendy_hive/screens/product_screen.dart';
 import 'package:trendy_hive/screens/splash_screen.dart';
 
 class TrendyHive extends StatelessWidget {
@@ -23,7 +24,7 @@ class TrendyHive extends StatelessWidget {
           home: child,
         );
       },
-      child: const SplashScreen(),
+      child: const ProductScreen(),
     );
   }
 }
