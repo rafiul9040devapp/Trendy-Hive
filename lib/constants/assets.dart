@@ -18,3 +18,5 @@ class AppImages {
   static const String visa = '${image}visa.png';
   static const String master = '${image}master.jpg';
 }
+
+
