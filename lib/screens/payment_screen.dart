@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:trendy_hive/model/payment_service.dart';
+import 'package:trendy_hive/screens/shipping_address_screen.dart';
 import 'package:trendy_hive/widgets/container_button_modal.dart';
 
 class PaymentScreen extends StatefulWidget {
@@ -52,14 +53,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
                       PaymentService paymentService =
                           PaymentService.paymentServiceList[index];
                       return Padding(
-                        padding:  EdgeInsets.symmetric( vertical: 8.h,horizontal: 4.w),
+                        padding: EdgeInsets.symmetric(
+                            vertical: 8.h, horizontal: 4.w),
                         child: Container(
                           width: size.width,
                           height: 60.h,
                           decoration: BoxDecoration(
-                              border: _type == index+1
-                                  ? Border.all(width: 1.w, color: Colors.redAccent)
-                                  : Border.all(width: .3.w, color: Colors.grey),
+                            border: _type == index + 1
+                                ? Border.all(
+                                    width: 1.w, color: Colors.redAccent)
+                                : Border.all(width: .3.w, color: Colors.grey),
                             borderRadius: BorderRadius.circular(10.r),
                             color: Colors.transparent,
                           ),
@@ -76,7 +79,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                             ),
                             title: Text(
                               paymentService.serviceName,
-                              style: _type == index+1
+                              style: _type == index + 1
                                   ? TextStyle(
                                       fontWeight: FontWeight.w600,
                                       fontSize: 20.spMax,
@@ -101,14 +104,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Sub-Total: ",
+                    Text(
+                      "Sub-Total: ",
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 15.spMax,
                         color: Colors.grey,
                       ),
                     ),
-                    Text("\$300.0",
+                    Text(
+                      "\$300.0",
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 15.spMax,
@@ -122,14 +127,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Shipping Fee: ",
+                    Text(
+                      "Shipping Fee: ",
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 15.spMax,
                         color: Colors.grey,
                       ),
                     ),
-                    Text("\$150.0",
+                    Text(
+                      "\$150.0",
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 15.spMax,
@@ -148,14 +155,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Total Payment: ",
+                    Text(
+                      "Total Payment: ",
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 15.spMax,
                         color: Colors.black,
                       ),
                     ),
-                    Text("\$450.0",
+                    Text(
+                      "\$450.0",
                       style: TextStyle(
                         fontWeight: FontWeight.w500,
                         fontSize: 15.spMax,
@@ -166,7 +175,10 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 ),
                 25.verticalSpace,
                 InkWell(
-                  onTap: (){},
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ShippingAddressScreen()),),
                   child: ContainerButtonModal(
                     containerWidth: size.width,
                     containerColor: Colors.redAccent,

@@ -17,6 +17,8 @@ class AppImages {
   static const String paypal = '${image}paypal.png';
   static const String visa = '${image}visa.png';
   static const String master = '${image}master.jpg';
+  static const String ups = '${image}ups.png';
+  static const String success = '${image}success.png';
 }
 
 
